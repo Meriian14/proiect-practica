@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-weight: 700; 
+}
+
+p {
+    font-weight: 400; 
+}
+
+/* Modificare fonturi si aparenta pagini*/
+body {
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 1.6;
+    background-color: #121212; 
+    color: #f4f4f4; 
+    overflow-x: hidden; /*prevenirea scroll orizontal */
+}
+
+/* antet */
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+/* Parallax*/
+.parallax {
+    background-image: url('.vscode/imag.jpg');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 150px 0;
+}
+
+.parallax h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.parallax p {
+    font-size: 1.5em;
+}
+
+/*Sectiuni*/
+section {
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px; 
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+/*Lista servicii*/
+#services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#services ul li {
+    margin: 10px 0;
+}
+
+/*Sectiunea portofoliu*/
+.project {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    border-radius: 10px; 
+}
+
+.project img:hover {
+    transform: scale(1.1);
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #3498db; 
+}
+
+/*Formular de contact*/
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundal transparent închis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* Animatia de rotatie */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#testimonials {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+}
+
+.testimonial {
+    background: #444;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Sectiunea intrebari*/
+#faq {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin: 40px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#faq h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+dl {
+    margin: 0;
+    padding: 0;
+}
+
+dt {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+dt:hover {
+    color: #2980b9;
+}
+
+dd {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+dt:hover + dd {
+    color: #333;
+    font-weight: 500;
+}
+
+#faq img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Sectiunea social media*/
+#social-media {
+    text-align: center;
+    margin: 50px 0;
+}
+
+#social-media h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-button i {
+    font-size: 20px;
+}
+
+.social-button.facebook {
+    background-color: #3b5998;
+}
+
+.social-button.twitter {
+    background-color: #00acee;
+}
+
+.social-button.linkedin {
+    background-color: #0077b5;
+}
+
+.social-button:hover {
+    opacity: 0.8;
+}
+
+#scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#scrollTop:hover {
+    background-color: #555;
+}
+
+/* subsol */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.job {
+    background: #222;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+.job h3 {
+    color: #3498db;
+}
+
+.job p {
+    color: #ddd;
+}
+
+.apply-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.apply-btn:hover {
+    background-color: #2980b9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+/* Dashboard */
+#dashboard {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.statistic-box {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 250px;
+}
+
+.statistic-box h3 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.statistic-box p {
+    color: #ddd;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Grafice */
+.chart-container {
+    margin: 50px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
